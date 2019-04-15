@@ -2,8 +2,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -14,7 +14,6 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, add_index|
 |name|string|null: false, unique: true, add_index|
 |email|string|null: false, unique: true, add_index|
 |password|string|null: false, add_index|
@@ -31,8 +30,8 @@
  |------|----|-------|
  |body|text|null: false|
  |image|string|
- |group_id|integer|null: false, foreign_key: true|
- |user_id|integer|null: false, foreign_key: true|
+ |group_id|references|null: false, foreign_key: true|
+ |user_id|references|null: false, foreign_key: true|
 
  ###Association
  - belongs_to :user
@@ -43,7 +42,6 @@
 
  |Column|Type|Options|
  |------|----|-------|
- |group_id|integer|null: false|
  |name|string|null: false|
  
  ###Association
