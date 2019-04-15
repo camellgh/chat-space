@@ -14,9 +14,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true, add_index|
-|email|string|null: false, unique: true, add_index|
-|password|string|null: false, add_index|
+|name|string|null: false, unique: true, index: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ###Association
 - has_many :members
