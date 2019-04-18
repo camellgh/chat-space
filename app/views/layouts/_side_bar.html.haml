@@ -1,0 +1,37 @@
+!!!
+%html   
+  %head 
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/     
+    %title ChatSpace     
+    
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true  
+    = csrf_meta_tags   
+    %body     
+      -# = render partial: 'layouts/flash'     
+      -# = yield
+  %head
+
+
+  .contents__side
+    .side-header
+      %p.user-name user1
+      %p
+        %ul.user-menu
+          %li.user-menu__new-group new
+          %li.user-menu__edit edit
+        %ul
+    %div
+    .groups
+      %a
+        .group
+          %p.group__group-name test1
+          %p
+          %p.group__latest-message new message
+          %p 
+        %div
+      %a
+    %div
+  %div
+%html

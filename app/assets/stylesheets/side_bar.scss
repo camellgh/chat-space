@@ -1,0 +1,10 @@
+.contents_side {
+  box-sizing: border-box;
+  width: 300px;
+  color: $navy;
+  .side_header{
+    height: 100%;
+    width:  300px;
+    background-color: $dark_gray;
+  }
+}
