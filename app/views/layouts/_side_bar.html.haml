@@ -1,20 +1,26 @@
-.contents__side
-  .side-header
-    %p.user-name user1
-    %p
-      %ul.user-menu
-        %li.user-menu__new-group new
-        %li.user-menu__edit edit
-      %ul
-  %div
+.side-bar
+  .header
+    %h3.header__name
+      ユーザーネーム
+    %ul.header__lists
+      %li.list
+      edit
+      %li.list
+      new group
   .groups
-    %a
-      .group
-        %p.group__group-name test1
-        %p
-        %p.group__latest-message new message
-        %p 
-      %div
-    %a
-  %div
-%div
+    .group
+      .group__name
+        グループ1
+      .group__message
+        新着メッセージ
+    .group
+      .group__name
+        グループ2
+      .group__message
+        新着メッセージ
+    .group
+      .group__name
+        グループ3
+      .group__message
+        新着メッセージ
+        
