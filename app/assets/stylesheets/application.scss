@@ -1,3 +1,10 @@
+@import "font-awesome";
 @import "./variable";
+@import "modules/flash";
 @import "./reset";
-@import "side_bar";
+@import "modules/side_bar";
+@import "modules/chat";
+@import "mixins/mixin";
+@import "mixins/vendor_prefix";
+@import "modules/user";
+@import "messages/messages.scss";
