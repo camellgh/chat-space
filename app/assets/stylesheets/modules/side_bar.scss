@@ -35,9 +35,11 @@
       box-sizing: border-box;
       padding: 20px 0 40px;
       &__name {
+        color: $white;
         font-size: 15px;
       }
       &__message {
+        color: $white;
         font-size: 11px;
         margin-top: 5px;
       }
