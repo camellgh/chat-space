@@ -19,11 +19,8 @@ $(function(){
                   </div>
                   <image src="${ image }">
                 </div>`
-
-    console.log(html);
     return html;
   }
-  // var image = message.image ? `<img src="${message.image}">` : ``
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -39,8 +36,6 @@ $(function(){
     .done(function(data){
      var html = buildHTML(data);
       $('.messages').append(html)
-      // $('#message_content').val('')
-      // $('#message_image').val('')
       $("form")[0].reset();
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
