@@ -55,10 +55,10 @@ $('#chat-group-users').append(html);
 }
 
 $("#user-search-result").on('click',".chat-group-user__btn--add", function(){
-    var user_name = $(this).data("user-name");
-    var user_id   = $(this).data("user-id");
-    addUser(user_name, user_id)
-    $(this).parent().remove();
+  var user_name = $(this).data("user-name");
+  var user_id   = $(this).data("user-id");
+  addUser(user_name, user_id)
+  $(this).parent().remove();
 
 })
 
