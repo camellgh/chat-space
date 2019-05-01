@@ -50,7 +50,7 @@ function addUser(user_name, user_id) {
                 <p class='chat-group-user__name'>${ user_name }</p>
                 <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
               </div>`
-$('#chat-group-users').append(html);
+  $('#chat-group-users').append(html);
 
 }
 
