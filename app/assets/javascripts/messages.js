@@ -4,7 +4,7 @@ $(function(){
     if(message.image.url != null){
       image = `<img class="lower-message__image" src=${message.image.url}>`
     }
-    console.log(image)
+
     var html = `<div class='message' data-id="${message.id}">
       <div class='upper-message'>
         <div class='upper-message__user-name'>
@@ -28,7 +28,7 @@ $(function(){
     e.preventDefault();
     var formData = new FormData(this);
     var url = window.location.href;
-    console.log(url);
+
     $.post({
       type: "POST",
       url: url,
@@ -51,7 +51,6 @@ $(function(){
   })
 
   function buildMessageHTML(message) {
-    console.log(message)
     if (message.content && message.image_url) {
       var html = `<div class="message" data-id="${message.id}">
       <div class="upper-message">
@@ -105,28 +104,21 @@ $(function(){
   }
 
   var reloadMessages = function() {
-    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
     last_message_id = $('p:last').data("massege-content");
-    console.log($('p:last'))
     group_id = location.pathname.split("/messages")
-    console.log(group_id[0] + '/api/messages')
+
     $.ajax({
-      //ルーティングで設定した通りのURLを指定
       url: group_id[0] + '/api/messages',
-      //ルーティングで設定した通りhttpメソッドをgetに指定
       type: 'get',
       dataType: 'json',
-      //dataオプションでリクエストに値を含める
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      // console.log(messages);
-      
       var insertHTML = '';
       messages.forEach(function(message){
-        // var name = message.content
         var insertHTML = buildHTML(message);
-      $('.messages').append(insertHTML)     
+      $('.messages').append(insertHTML);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
 
     })
