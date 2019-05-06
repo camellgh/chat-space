@@ -33,7 +33,9 @@
       padding: 0 20px;
       &__button {
         color: $light_blue;
-        text-decoration: none;
+        .EDITlink {
+          text-decoration: none;
+        }
       }
     }
   }

@@ -17,8 +17,7 @@
             メンバー名
       .right-header
         .right-header__button
-          
-          = link_to 'Edit', edit_group_path(@group)
+          = link_to 'Edit', edit_group_path(@group),class:"EDITlink"
     .messages
       = render @messages
     #message_form.form
